@@ -35,7 +35,7 @@ public class Menu{
                     }
                     case 2 -> {
 
-                        function.balance = function.withdraw(function.balance) - function.withdraw(function.balance);
+                        function.balance = function.balance - function.withdraw(function.balance);
                     }
                     case 3 -> {
 
