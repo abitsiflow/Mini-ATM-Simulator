@@ -14,8 +14,9 @@ public class ATM_function {
             System.out.println("Amount cannot be negative");
             return 0;
         }else{
-            balance = amount + deposit(balance);
+            balance = amount += balance;
             System.out.println("Deposit Successfully!");
+
         }
 
         return amount;
@@ -33,7 +34,7 @@ public class ATM_function {
             System.out.println("Amount cannot be negative");
             return 0;
         }else{
-            balance = amount - withdraw(balance);
+            balance = amount - balance;
             System.out.println("Withdraw Successfully!");
         }
 
@@ -41,6 +42,6 @@ public class ATM_function {
     }
 
     void showBalance(double balance){
-        System.out.printf("%.2f Balance: " + "$" , balance);
+        System.out.println("Balance: " + "$" + balance );
     }
 }

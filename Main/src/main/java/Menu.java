@@ -9,7 +9,7 @@ public class Menu{
         int choice = 0;
         boolean mainIsRunning = true;
 
-        while (mainIsRunning) {
+
             System.out.println("*******************");
             System.out.println("Mini ATM Simulator");
             System.out.println("*******************");
@@ -17,7 +17,7 @@ public class Menu{
             System.out.println("PIN authorization");
             System.out.print("Enter your PIN: ");
             pin.logIn();
-
+        while (mainIsRunning) {
             System.out.println("*************");
             System.out.println("<<ATM MENU>>");
             System.out.println("*************");
