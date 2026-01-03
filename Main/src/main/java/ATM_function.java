@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ATM_function {
-    double balance = 0;
+ double balance = 0;
     Scanner scan = new Scanner(System.in);
 
     double deposit(double balance){
@@ -14,11 +14,11 @@ public class ATM_function {
             System.out.println("Amount cannot be negative");
             return 0;
         }else{
-            balance = amount git + balance;
+            amount += balance;
             System.out.println("Deposit Successfully!");
         }
 
-        return balance;
+        return amount;
     }
 
     double withdraw(double balance){
@@ -26,7 +26,7 @@ public class ATM_function {
         System.out.println("Enter amount: ");
         amount = scan.nextDouble();
 
-        if(amount > balance){
+        if(amount < balance){
             System.out.println("Your Balance is Insufficient funds");
             return 0;
         }else if(amount < 0){
@@ -37,10 +37,10 @@ public class ATM_function {
             System.out.println("Withdraw Successfully!");
         }
 
-        return balance;
+        return amount;
     }
 
     void showBalance(double balance){
-        System.out.println("Balance: " + "$" + balance );
+        System.out.println("Balance: " + "$" + balance);
     }
 }
