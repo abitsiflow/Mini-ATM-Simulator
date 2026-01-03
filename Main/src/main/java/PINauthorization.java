@@ -14,10 +14,11 @@ public class PINauthorization {
 
         for(int i = 0; i < attempts; i++){
             this.PIN = scan.nextInt();
+            scan.nextLine();
 
             if (this.PIN != 3221) {
                 System.out.println("PIN INCORRECT!");
-                System.out.print("Enter your PIN: ");
+                System.out.println("Enter your PIN: ");
                 System.out.println();
             }else{
                 System.out.println("PIN CORRECT!");

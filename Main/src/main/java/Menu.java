@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.InputMismatchException;
 public class Menu{
 
     public static void main(String [] args){
@@ -9,7 +9,6 @@ public class Menu{
         int choice = 0;
         boolean mainIsRunning = true;
 
-
             System.out.println("*******************");
             System.out.println("Mini ATM Simulator");
             System.out.println("*******************");
@@ -18,24 +17,29 @@ public class Menu{
             System.out.print("Enter your PIN: ");
             pin.logIn();
         while (mainIsRunning) {
-            System.out.println("*************");
-            System.out.println("<<ATM MENU>>");
-            System.out.println("*************");
-            System.out.println("1. Deposit");
-            System.out.println("2. Withdraw");
-            System.out.println("3. Show Balance");
-            System.out.println("4. Exit");
-            choice = scan.nextInt();
-            scan.nextLine();
+            try{
+                System.out.println("*************");
+                System.out.println("<<ATM MENU>>");
+                System.out.println("*************");
+                System.out.println("1. Deposit");
+                System.out.println("2. Withdraw");
+                System.out.println("3. Show Balance");
+                System.out.println("4. Exit");
+                System.out.print("Enter Your Choice:");
+                choice = scan.nextInt();
+                scan.nextLine();
 
-            switch(choice){
-                case 1 -> function.deposit(function.balance);
-                case 2 -> function.withdraw(function.balance);
-                case 3 -> function.showBalance(function.balance);
-                case 4 -> mainIsRunning = false;
-                default -> System.out.println("Invalid Choice please Try again");
+                switch(choice){
+                    case 1 -> function.deposit(function.balance);
+                    case 2 -> function.withdraw(function.balance);
+                    case 3 -> function.showBalance(function.balance);
+                    case 4 -> mainIsRunning = false;
+                    default -> System.out.println("Invalid Choice please Try again");
+                }
+
+            }catch(InputMismatchException ex){
+                System.out.println("Please Input numbers!");
             }
-
 
         }
 
