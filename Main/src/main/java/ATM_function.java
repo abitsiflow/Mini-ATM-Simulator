@@ -14,7 +14,7 @@ public class ATM_function {
             System.out.println("Amount cannot be negative");
             return 0;
         }else{
-            balance = amount + balance;
+            balance = amount git + balance;
             System.out.println("Deposit Successfully!");
         }
 
