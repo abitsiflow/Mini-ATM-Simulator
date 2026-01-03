@@ -30,10 +30,21 @@ public class Menu{
                 scan.nextLine();
 
                 switch(choice){
-                    case 1 -> function.deposit(function.balance);
-                    case 2 -> function.withdraw(function.balance);
-                    case 3 -> function.showBalance(function.balance);
-                    case 4 -> mainIsRunning = false;
+                    case 1 -> {
+                         function.balance += function.deposit(function.balance);
+                    }
+                    case 2 -> {
+
+                        function.balance = function.withdraw(function.balance) - function.withdraw(function.balance);
+                    }
+                    case 3 -> {
+
+                        function.showBalance(function.balance);
+                    }
+                    case 4 -> {
+
+                        mainIsRunning = false;
+                    }
                     default -> System.out.println("Invalid Choice please Try again");
                 }
 
