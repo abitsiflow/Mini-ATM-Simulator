@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class ATM_function {
- double balance = 0;
     Scanner scan = new Scanner(System.in);
+ double balance = 0;
 
     double deposit(double balance){
         double amount;
@@ -25,7 +25,7 @@ public class ATM_function {
         System.out.println("Enter amount: ");
         amount = scan.nextDouble();
 
-        if(amount < balance){
+        if(amount > balance){
             System.out.println("Your Balance is Insufficient funds");
             return 0;
         }else if(amount < 0){

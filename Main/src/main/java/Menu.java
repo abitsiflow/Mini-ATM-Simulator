@@ -3,7 +3,7 @@ import java.util.InputMismatchException;
 public class Menu{
 
     public static void main(String [] args){
-        Scanner scan = new Scanner(System.in);
+       Scanner scan = new Scanner(System.in);
         PINauthorization pin = new PINauthorization(3221);
         ATM_function function = new ATM_function();
         int choice = 0;

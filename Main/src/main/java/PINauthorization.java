@@ -5,7 +5,7 @@ public class PINauthorization {
     int PIN = 3221;
 
     PINauthorization(int PIN){
-        this.PIN = 0;
+        this.PIN = PIN;
     }
 
     void logIn(){
