@@ -1,0 +1,1 @@
+Mini ATM Simulator (v1) is an early-intermediate Java console project that allows users to log in with a PIN, deposit and withdraw money, and check their balance. This version is fully functional and demonstrates basic OOP concepts, loops, and input handling. Future updates will improve encapsulation, add transaction history, and make the project more scalable and polished.
